@@ -32,7 +32,6 @@ public class Conexao {
 
     public Connection getConnection() {
         boolean validaConexao = connectDrive();
-        System.out.println(validaConexao);
 
         if (validaConexao) {
             return this.conexao;

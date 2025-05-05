@@ -1,5 +1,6 @@
 create database db_java;
 use db_java;
+drop table funcionario;
 
 create table departamento (
 	idDepartamento int not null auto_increment,
@@ -9,7 +10,7 @@ create table departamento (
 );
 
 create table funcionario (
-	idFuncionario int not null,
+	idFuncionario int auto_increment primary key,
     nome varchar(45) not null,
     matricula int not null,
     departamento_fk int,
@@ -22,10 +23,10 @@ insert into departamento(nome, sigla) values
     ("Engenharia", "ENG");
 
 
-insert into funcionario (idFuncionario, nome, matricula, departamento_fk) values
-	(1, "Maria", 2534, 3),
-    (2, "Murilo", 8352, 3),
-    (3, "Paula", 2855, 3);
+insert into funcionario (nome, matricula, departamento_fk) values
+	( "Maria", 2534, 3),
+    ( "Murilo", 8352, 3),
+    ( "Paula", 2855, 3);
 
 
 select * from funcionario;
